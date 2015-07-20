@@ -17,7 +17,7 @@
   render: ->
     <div className="profile">
       <a href="#" onClick={ this.onClick }>
-        <ProfilePhoto />
+        <ProfilePhoto avatar={ this.props.avatar } />
         <ProfileInfo name={ this.props.name } location={ this.props.location } />
       </a>
       <div className="menu">
