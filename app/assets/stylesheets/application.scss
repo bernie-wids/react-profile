@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+$grey: #bbb;
+
+ body {
+  color: $grey;
+  font-family: arial;
+
+  .profile {
+    position: relative;
+
+    &.active .menu {
+      display: block;
+    }
+
+    .menu {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      display: none;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: solid 2px $grey;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          content: '';
+          border-style: solid;
+          border-width: 15px 10px;
+          border-color: transparent transparent $grey transparent;
+          left: 15px;
+          top: -30px;
+        }
+
+        a {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+    }
+    
+    .photo { 
+      float: left; 
+      width: 50px;
+      height: 50px;
+      border: solid 2px $grey;
+      border-radius: 50%;
+      margin-right: 10px;
+      svg {
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    
+    .info {
+      padding: 10px 0;
+      .location {
+        font-size: 12px;
+      }
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    color: $grey;
+  }
+}
+
+svg {
+  fill: currentColor;
+}
